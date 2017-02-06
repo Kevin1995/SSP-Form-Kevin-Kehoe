@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+    form(method='post' action='/hello')
+        div.input
+            span.label Title
+            input(type="text", name="name")
+        div.actions
+            input(type="submit", value="add")
