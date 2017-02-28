@@ -6,9 +6,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/hello', function (req, res) {
-    var name = req.param('name');
-    res.render('hello', { name:name });
+router.post('/', function (req, res) {
+    var jokesEntered = req.param('jokes');
+    var jokesArray;
+    var test = jokesArray || []
+    test.push(jokesEntered)
+    res.render('index', { name: jokesEntered });
+    console.log(jokesArray);
 });
 
 module.exports = router;

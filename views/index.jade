@@ -2,9 +2,12 @@ extends layout
 
 block content
   h1= title
-    form(method='post' action='/hello')
-        div.input
-            span.label Title
-            input(type="text", name="name")
-        div.actions
+    form(method='post' action='/')
+            span.label Enter Jokes Here
+            br
+            input(type="text", name="jokes")
+            br
             input(type="submit", value="add")
+
+    
+  h1 #{name}
